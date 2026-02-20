@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datt niwasi matimand vidyalay atnur.</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+.hero-buttons{
+    margin-top:25px;
+}
+
+.btn-primary{
+    display:inline-block;
+    padding:12px 28px;
+    background:linear-gradient(45deg,#3f51b5,#5c6bc0);
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(63,81,181,0.4);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+}
+
+/* NAVIGATION */
+nav{
+position:fixed;
+width:100%;
+background:#ffffff;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+z-index:1000;
+}
+
+nav h2{
+color:#3f51b5;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#3f51b5;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('Assets/Bg.jpeg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero a{
+background:#ff9800;
+color:#fff;
+padding:12px 25px;
+text-decoration:none;
+border-radius:30px;
+transition:0.3s;
+}
+
+.hero a:hover{
+background:#e68900;
+}
+
+/* SECTION */
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+color:#3f51b5;
+font-size:32px;
+}
+
+/* VISION MISSION VALUES */
+.vmv{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.vmv-box{
+background:#fff;
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.vmv-box:hover{
+transform:translateY(-8px);
+}
+
+.vmv-box i{
+font-size:40px;
+color:#ff9800;
+margin-bottom:20px;
+}
+
+.vmv-box h3{
+margin-bottom:15px;
+color:#3f51b5;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery-box{
+height:200px;
+background:#ddd;
+border-radius:10px;
+overflow:hidden;
+}
+
+.gallery-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* VIDEO */
+.video-section iframe{
+width:100%;
+height:400px;
+border-radius:12px;
+}
+
+/* CONTACT + MAP */
+.contact-map{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.contact-info{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info p{
+margin-bottom:15px;
+}
+
+.contact-map iframe{
+width:100%;
+height:350px;
+border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+background:#1f1f2e;
+color:#ddd;
+padding:60px 8% 20px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-box h3{
+color:#ff9800;
+margin-bottom:20px;
+}
+
+.footer-box ul{
+list-style:none;
+}
+
+.footer-box ul li{
+margin-bottom:10px;
+}
+
+.footer-box ul li a{
+text-decoration:none;
+color:#ddd;
+transition:0.3s;
+}
+
+.footer-box ul li a:hover{
+color:#fff;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+border-top:1px solid #444;
+padding-top:15px;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{
+font-size:32px;
+}
+.video-section iframe{
+height:250px;
+}
+}
+
+/* ABOUT SECTION */
+.about-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:50px;
+align-items:center;
+}
+
+.about-image{
+position:relative;
+}
+
+.about-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.about-content h3{
+color:#3f51b5;
+margin-bottom:20px;
+font-size:24px;
+}
+
+.about-content p{
+margin-bottom:25px;
+line-height:1.7;
+}
+
+.about-stats{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.stat-box{
+background:#ffffff;
+padding:20px;
+border-radius:12px;
+text-align:center;
+flex:1;
+min-width:120px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-5px);
+}
+
+.stat-box h4{
+color:#ff9800;
+font-size:22px;
+margin-bottom:5px;
+}
+/* FADE ANIMATION */
+.fade-element {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-element.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const elements = document.querySelectorAll("section, .stat-box, .gallery-box, .video-section, .contact-container");
+
+    elements.forEach(el => {
+        el.classList.add("fade-element");
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    elements.forEach(el => observer.observe(el));
+
+});
+</script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+<h2>D.N.M vidyalay</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Location</a></li>
+<li><a href="#footer">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+    <h1>Datt niwasi matimand vidyalay</h1>
+    <p>Empowering Visually Challenged Students Through Quality Education</p>
+
+    <div class="hero-buttons">
+        <a href="#about" class="btn-primary">Learn More</a>
+
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+    </div>
+</div>
+</section>
+<!-- ABOUT US -->
+<section id="about">
+<h2 class="section-title">About Us</h2>
+
+<div class="about-container">
+
+<div class="about-image">
+<img src="Assets/About.jpeg" alt="School Image">
+</div>
+
+<div class="about-content">
+<h3>Empowering Through Inclusive Education</h3>
+<p>
+Datt niwasi matimand vidyalay atnur is dedicated to empowering visually impaired students through quality education, fostering independence, and nurturing their unique talents. Located in the heart of nilanga, Maharashtra, we provide a safe, supportive, and enriching environment where every child can thrive. Our school serves students from Grades 1 through 8, offering a comprehensive curriculum adapted to meet the specific needs of visually impaired learners. With dedicated teachers, modern facilities, and 24-hour residential care, we ensure that every student receives the attention and support they deserve.
+</p>
+
+
+</div>
+
+</div>
+</section>
+
+<!-- VISION MISSION VALUES -->
+<section id="vision">
+<h2 class="section-title">Vision • Values • Community</h2>
+<div class="vmv">
+
+<div class="vmv-box">
+<i class="fas fa-eye"></i>
+<h3>Our Vision</h3>
+<p>To be a beacon of hope and excellence in special education, where every child discovers their potential and builds a confident future.</p>
+</div>
+
+<div class="vmv-box">
+<i class="fas fa-bullseye"></i>
+<h3>Our Values</h3>
+<p>Compassion, excellence, inclusivity, and empowerment guide everything we do. We believe in nurturing both academic and personal growth.</p>
+</div>
+
+<div class="vmv-box">
+<i class="fas fa-heart"></i>
+<h3>Our Community</h3>
+<p>Students, dedicated staff, and supportive families come together to create a warm, caring environment where everyone belongs.</p>
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h1 class="section-title">Life at Our School</h1>
+<div class="gallery">
+<div class="gallery-box"><img src="Assets/g1.jpeg" alt=""></div>
+<div class="gallery-box"><img src="Assets/g2.jpeg" alt=""></div>
+<div class="gallery-box"><img src="Assets/g3.jpeg" alt=""></div>
+<div class="gallery-box"><img src="Assets/g4.jpeg" alt=""></div>
+
+</div>
+</section>
+
+
+
+<!-- VIDEO -->
+<section id="video" class="video-section" style ="display:none;">
+<h2 class="section-title">School Video</h2>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+</section>
+
+<!-- CONTACT + MAP -->
+<section id="contact">
+<h2 class="section-title">Find Us</h2>
+<div class="contact-map">
+
+<div class="contact-info">
+<p><strong>Phone:</strong> +91 9766841195</p>
+<p><strong>Email:</strong> malchapurerahul@gmail.com</p>
+<p><strong>Address:</strong>Datt niwasi matimand vidyalay atnur, Tq. jalkot Dist Latur.</p>
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8264699509155!2d77.256351!3d18.536742299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce53ce92363297%3A0xcf3855d419ba3c5d!2sDatt%20niwasi%20matimand%20vidyaly%20atnur!5e0!3m2!1sen!2sin!4v1771590921381!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+<div class="footer-container">
+
+<div class="footer-box">
+<h3>Datt niwasi matimand vidyalay atnur.</h3>
+<p>Providing quality education and empowerment for visually challenged students.</p>
+</div>
+
+<div class="footer-box">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Location</a></li>
+<li><a href="#footer">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-box">
+<h3>Contact Details</h3>
+<p>+91 9766841195</p>
+<p>malchapurerahul@gmail.com</p>
+<p>Datt niwasi matimand vidyalay atnur, Tq. jalkot Dist Latur.</p>
+</div>
+
+
+<div class="footer-bottom">
+© 2026 Datt niwasi matimand vidyalay atnur. All Rights Reserved.
+</div>
+</div>
+<div class="footer">
+ <center>made with ❤️ By <a href="https://www.linkedin.com/in/vipin-kumar-1938b9170?trk=contact-info" target="_blank">Vipin Kumar </a> </center>
+</div>
+</footer>
+
+</section>
+</body>
+</html>
